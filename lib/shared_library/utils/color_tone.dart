@@ -6,4 +6,5 @@ class ColorTone {
   static const Color smWhite = Color(0xFFFFFFFF);
   static const Color smBlack = Color(0xFF000000);
   static const Color smGrey = Color(0xFFC4C4C4);
+  static const Color smGreyLight = Color(0xFFF2F3F7);
 }

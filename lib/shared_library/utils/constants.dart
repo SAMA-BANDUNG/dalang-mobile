@@ -17,6 +17,7 @@ class SMRoute {
   String get onBoarding => '/auth/onBoarding';
   String get login => '/auth/login';
   String get register => '/auth/register';
+  String get registerSecond => '/auth/register/2';
   String get forgotPassword => '/auth/forgot-password';
 }
 

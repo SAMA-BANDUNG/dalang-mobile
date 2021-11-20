@@ -1,4 +1,4 @@
-import 'package:dalang_mobile/feature/authentication/ui/login/controller/login_controller.dart';
+import 'package:dalang_mobile/feature/authentication/ui/register/controller/register_controller.dart';
 import 'package:dalang_mobile/shared_library/components/sm_text_field.dart';
 import 'package:dalang_mobile/shared_library/service_locator/service_locator.dart';
 import 'package:dalang_mobile/shared_library/utils/color_tone.dart';
@@ -6,9 +6,9 @@ import 'package:dalang_mobile/shared_library/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({Key? key}) : super(key: key);
-  final LoginController _loginController = sl();
+class RegisterSecondPage extends StatelessWidget {
+  RegisterSecondPage({Key? key}) : super(key: key);
+  final RegisterController _registerController = sl();
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
               children: [
                 const Center(
                   child: Text(
-                    'Selamat Datang \nKembali',
+                    'Bergabung\n bersama kami',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Montserrat',
@@ -34,16 +34,36 @@ class LoginPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 36.0),
                   child: SMTextField(
-                    controller: _loginController.emailController,
-                    hintText: 'Email address',
+                    controller: TextEditingController(),
+                    hintText: 'Number phone',
+                    suffixIcon: const Icon(
+                      Icons.check_rounded,
+                      color: ColorTone.smPrimaryGreen,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 36.0),
                   child: SMTextField(
-                    controller: _loginController.passwordController,
+                    controller: TextEditingController(),
+                    hintText: 'Email',
+                    suffixIcon: const Icon(
+                      Icons.check_rounded,
+                      color: ColorTone.smPrimaryGreen,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 36.0),
+                  child: SMTextField(
+                    controller: TextEditingController(),
                     hintText: 'Password',
+                    suffixIcon: const Icon(
+                      Icons.remove_red_eye,
+                      color: ColorTone.smBlack,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 24),
@@ -67,23 +87,6 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 16),
-                Center(
-                  child: GestureDetector(
-                    onTap: (){
-                      Get.toNamed(Constants.smRoute.forgotPassword);
-                    },
-                    child: const Text(
-                      'Lupa password ?',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w400,
-                          color: ColorTone.smBlack,
-                          fontSize: 14),
-                    ),
-                  ),
-                ),
               ],
             ),
             Align(
@@ -94,7 +97,7 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      'Belum memiliki akun ? ',
+                      'Sudah memiliki akun ? ',
                       style: TextStyle(
                         color: ColorTone.smBlack,
                         fontFamily: 'Inter',
@@ -103,11 +106,11 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: (){
-                        Get.toNamed(Constants.smRoute.register);
+                      onTap: () {
+                        Get.toNamed(Constants.smRoute.login);
                       },
                       child: const Text(
-                        'Daftar Sekarang',
+                        'Masuk',
                         style: TextStyle(
                           color: ColorTone.smPrimaryGreen,
                           fontFamily: 'Inter',

@@ -2,7 +2,6 @@ import 'package:dalang_mobile/domain/authentication/data/datasources/authenticat
 import 'package:dalang_mobile/domain/authentication/data/datasources/authentication_remote_datasource.dart';
 import 'package:dalang_mobile/domain/authentication/domain/entities/result_forgot_password.dart';
 import 'package:dalang_mobile/domain/authentication/domain/entities/result_login.dart';
-import 'package:dalang_mobile/domain/authentication/domain/entities/result_refresh_token.dart';
 import 'package:dalang_mobile/domain/authentication/domain/entities/result_register.dart';
 import 'package:dalang_mobile/domain/authentication/domain/entities/result_token.dart';
 import 'package:dalang_mobile/domain/authentication/domain/repositories/authentication_repository.dart';
@@ -45,7 +44,7 @@ class AuthenticationRepositoryImpl implements AuthenticationRepository {
   }
 
   @override
-  Future<Either<Failure, ResultRefreshToken>> getRefreshToken(
+  Future<Either<Failure, ResultToken>> getRefreshToken(
       RefreshTokenParams refreshTokenParams) {
     // TODO: implement getRefreshToken
     throw UnimplementedError();

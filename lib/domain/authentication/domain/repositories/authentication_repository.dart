@@ -1,6 +1,5 @@
 import 'package:dalang_mobile/domain/authentication/domain/entities/result_forgot_password.dart';
 import 'package:dalang_mobile/domain/authentication/domain/entities/result_login.dart';
-import 'package:dalang_mobile/domain/authentication/domain/entities/result_refresh_token.dart';
 import 'package:dalang_mobile/domain/authentication/domain/entities/result_register.dart';
 import 'package:dalang_mobile/domain/authentication/domain/entities/result_token.dart';
 import 'package:dalang_mobile/domain/authentication/domain/usecases/get_refresh_token_usecase.dart';
@@ -16,5 +15,5 @@ abstract class AuthenticationRepository {
   Future<Either<Failure,ResultRegister>> register(RegisterParams registerParams);
   Future<Either<Failure,ResultForgotPassword>> forgotPassword(ForgotPasswordParams forgotPasswordParams);
   Future<Either<Failure,ResultToken>> getToken(NoParams noParams);
-  Future<Either<Failure,ResultRefreshToken>> getRefreshToken(RefreshTokenParams refreshTokenParams);
+  Future<Either<Failure,ResultToken>> getRefreshToken(RefreshTokenParams refreshTokenParams);
 }

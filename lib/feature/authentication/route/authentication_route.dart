@@ -10,11 +10,11 @@ List<GetPage> authenticationRoute() {
   return [
     GetPage(
       name: Constants.smRoute.initial,
-      page: () => SplashPage(),
+      page: () => const SplashPage(),
     ),
     GetPage(
       name: Constants.smRoute.onBoarding,
-      page: () => OnBoardingPage(),
+      page: () => const OnBoardingPage(),
     ),
     GetPage(
       name: Constants.smRoute.login,

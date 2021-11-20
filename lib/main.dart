@@ -1,4 +1,5 @@
 import 'package:dalang_mobile/feature/authentication/ui/splash/page/splash_page.dart';
+import 'package:dalang_mobile/feature/home/route/home_route.dart';
 import 'package:dalang_mobile/shared_library/injection/injection.dart';
 import 'package:dalang_mobile/shared_library/set_orientation/set_orientation.dart';
 import 'package:dalang_mobile/shared_library/utils/constants.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       home: const SplashPage(),
       getPages: [
         ...authenticationRoute(),
+        ...menuRoute(),
       ],
     );
   }

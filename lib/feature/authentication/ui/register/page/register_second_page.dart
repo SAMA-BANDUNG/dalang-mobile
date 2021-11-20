@@ -69,19 +69,24 @@ class RegisterSecondPage extends StatelessWidget {
                 const SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 36.0),
-                  child: Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(16.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(38.0),
-                      color: ColorTone.smPrimaryGreen,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Masuk",
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.offAllNamed(Constants.smRoute.menu);
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(16.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(38.0),
+                        color: ColorTone.smPrimaryGreen,
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "Masuk",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),

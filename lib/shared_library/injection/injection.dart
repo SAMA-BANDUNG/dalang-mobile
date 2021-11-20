@@ -1,5 +1,6 @@
 import 'package:dalang_mobile/domain/authentication/di/authentication_domain_dependencies.dart';
 import 'package:dalang_mobile/feature/authentication/di/authentication_feature_dependencies.dart';
+import 'package:dalang_mobile/feature/home/di/menu_feature_dependencies.dart';
 import 'package:dalang_mobile/shared_library/service_locator/service_locator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
@@ -17,6 +18,7 @@ class Injection {
 
   void _registerFeatureDependencies(){
     AuthenticationFeatureDependencies();
+    MenuFeatureDependencies();
   }
 
   Future<void> _registerCoreDependencies() async {

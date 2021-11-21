@@ -63,18 +63,43 @@ class _ExplorePageState extends State<ExplorePage> {
                 child: Row(
                   children: [
                     Expanded(
-                      child: SMSearchTextField(
-                        hintText: 'Search',
-                        controller: TextEditingController(),
+                      child: Container(
+                        child: SMSearchTextField(
+                          hintText: 'Search',
+                          controller: TextEditingController(),
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(28),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 2,
+                              offset: const Offset(
+                                  0, 1), // changes position of shadow
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(width: 16.0),
                     Container(
                       width: 48,
                       height: 48,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: ColorTone.smPrimaryGreen,
                         shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 2,
+                            offset: const Offset(
+                                0, 1), // changes position of shadow
+                          ),
+                        ],
                       ),
                       child: const Icon(
                         Icons.search,
